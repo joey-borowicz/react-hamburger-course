@@ -16,10 +16,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>HEY</h1>
-        <button>SWITH NAME</button>
-        <Person name="Johnny Juliano" profession="Music Producer" />
+        {/* <button>SWITH NAME</button> */}
         <Person name="Sonny Digital" profession="Music Producer" />
         <Person name="Dan Katz" profession="Blogger" />
+        <Person name="Johnny Juliano" profession="Music Producer" />
         <Person
           name={this.state.people[0].name}
           profession={this.state.people[0].profession}
@@ -31,6 +31,10 @@ class App extends Component {
         <Person
           name={this.state.people[2].name}
           profession={this.state.people[2].profession}
+        />
+        <Person
+          name={this.state.people[3].name}
+          profession={this.state.people[3].profession}
         />
       </div>
     );
