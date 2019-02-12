@@ -99,7 +99,7 @@
 
 .Lettuce {
     width: 85%;
-    height: 7%;
+    height: 5.5%;
     margin: 2% auto;
     background: linear-gradient(#228c1d, #91ce50);
     border-radius: 20px;
@@ -115,7 +115,7 @@
 .Egg {
   width: 84%;
   height: 5%;
-  background: linear-gradient(#fff0b0, #e6c406);
+  background: linear-gradient(#fffce8, #e6c406);
   margin: 2% auto;
   border-radius: 12px;
 }
