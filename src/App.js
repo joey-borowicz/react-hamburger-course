@@ -7,6 +7,7 @@ class App extends Component {
     people: [
       { name: "Tyga Montana", profession: "Rapper" },
       { name: "Metro Boomin'", profession: "Music Producer" },
+      { name: "Rone", profession: "Artist/Personality" },
       { name: "Super Producer BC", profession: "Podcast Producer" }
     ]
   };
