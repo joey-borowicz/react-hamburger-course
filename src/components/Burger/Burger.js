@@ -6,7 +6,6 @@ import Fixing from './Fixings/Fixings';
 const burger = (props) => {
     let transformedIngredients = Object.keys(props.ingredients)
         .map(fixKey => {
-            console.log('[Burger.js]', props.ingredients)
             return [...Array(props.ingredients[fixKey])].map((_, i) => {
                 return <Fixing key={fixKey + i} type={fixKey} />;
             });
