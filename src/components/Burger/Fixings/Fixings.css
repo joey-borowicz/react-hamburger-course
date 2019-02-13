@@ -110,12 +110,13 @@
     height: 3%;
     background: linear-gradient(#bf3813, #c45e38);
     margin: 2% auto;
+    border-radius: 1px;
 }
 
 .Egg {
-  width: 84%;
-  height: 5%;
-  background: linear-gradient(#fffce8, #e6c406);
-  margin: 2% auto;
-  border-radius: 12px;
+    width: 84%;
+    height: 5%;
+    background-image: radial-gradient(circle,#e6c406,#faf5d8,#fffce8);
+    margin: 2% auto;
+    border-radius: 40% 40% 2px 2px;
 }
