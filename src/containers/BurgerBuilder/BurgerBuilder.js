@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Aux from '../../hoc/Auxilary';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
+import Modal from '../../components/GeneralUI/Modal/Modal';
+import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
 const PRICES = {
     lettuce: 0.19,
@@ -24,7 +26,8 @@ class BurgerBuilder extends Component {
                 patty: 0
             },
             totalPrice: 3.45,
-            purchaseable: false
+            purchaseable: false,
+            purchasing: false
         }
     }
 
@@ -38,6 +41,18 @@ class BurgerBuilder extends Component {
             }, 0);
 
         this.setState({ purchaseable: sum > 0 });
+    }
+
+    purchaseHander = () => {
+        this.setState({ purchasing: true });
+    }
+
+    cancelPurchaseHandler = () => {
+        this.setState({ purchasing: false });
+    };
+
+    confirmPurchaseHandler = () => {
+        alert("Congrats on purchasing your Goodburger!")
     }
 
     addIngredientHandler = (type) => {
@@ -82,6 +97,11 @@ class BurgerBuilder extends Component {
         }
         return (
             <Aux>
+                <Modal show={this.state.purchasing} modalClosed={this.cancelPurchaseHandler}>
+                    <OrderSummary ingredients={this.state.ingredients}
+                        cancelPurchase={this.cancelPurchaseHandler}
+                        confirmPurchase={this.confirmPurchaseHandler} />
+                </Modal>
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
                     ingredientAdded={this.addIngredientHandler}
@@ -89,6 +109,7 @@ class BurgerBuilder extends Component {
                     disabled={disabled}
                     price={this.state.totalPrice}
                     purchaseable={this.state.purchaseable}
+                    orderClicked={this.purchaseHander}
                 />
             </Aux>
         );
