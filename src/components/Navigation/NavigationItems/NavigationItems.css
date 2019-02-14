@@ -1,0 +1,38 @@
+.NavigationItems {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.NavigationItem {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+}
+
+.NavigationItem a {
+    color: wheat;
+    text-decoration: none;
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+    box-sizing: border-box;
+    display: block;
+}
+
+.NavigationItem a:hover, .NavigationItem a:active, .NavigationItem a.active {
+    background-color: wheat;
+    border-bottom: 4px solid red;
+    color: darkslategray;
+}
+
+.Aux {
+    width: 25%
+}
