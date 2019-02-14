@@ -1,7 +1,8 @@
 import React from 'react';
 
 import Aux from '../../../hoc/Auxilary';
-import Button from '../../GeneralUI/Button/Button';
+//import Button from '../../GeneralUI/Button/Button';
+import { Button } from 'reactstrap';
 
 const orderSummary = (props) => {
     const ingredients = Object.keys(props.ingredients)
@@ -19,8 +20,10 @@ const orderSummary = (props) => {
             <ul>
                 {ingredients}
             </ul>
-            <Button clicked={props.cancelPurchase} btnType="Danger">Return</Button>
-            <Button clicked={props.confirmPurchase} btnType="Success">Purchase</Button>
+            <Button onClick={props.cancelPurchase} color="danger">Return</Button>
+            <Button onClick={props.confirmPurchase} color="success">Purchase</Button>
+            {/* <Button clicked={props.cancelPurchase} btnType="Danger">Return</Button>
+            <Button clicked={props.confirmPurchase} btnType="Success">Purchase</Button> */}
         </Aux>
     );
 };
